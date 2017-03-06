@@ -4,18 +4,18 @@ import java.io.IOException;
 
 import org.apache.cxf.endpoint.Server;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
-import org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider;
-import org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider;
 
-import pl.piomin.services.cxf.account.service.AccountService;
+import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+
+import pl.piomin.services.cxf.account.service.AccountServiceImpl;
 
 public class AccountStarter {
 
     public void startRestService() {
         JAXRSServerFactoryBean factory = new JAXRSServerFactoryBean();
         factory.setAddress("http://localhost:8282/account");
-        factory.setResourceClasses(AccountService.class);
-        factory.setResourceProvider(new SingletonResourceProvider(new AccountService()));
+        factory.setResourceClasses(AccountServiceImpl.class);
+//        factory.setResourceProvider(new SingletonResourceProvider(new AccountService()));
         factory.setProvider(new JacksonJaxbJsonProvider());
         Server server = factory.create();
         server.start();
