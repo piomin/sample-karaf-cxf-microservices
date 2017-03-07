@@ -25,7 +25,7 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext-1.1.xsd
   ">
-    <cxf:bus id="personRestBus">
+    <cxf:bus id="accountRestBus">
     </cxf:bus>
 
     <bean id="accountServiceImpl" class="pl.piomin.services.cxf.account.service.AccountServiceImpl"/>
