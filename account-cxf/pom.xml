@@ -9,4 +9,12 @@
 	<artifactId>account-cxf</artifactId>
 	<packaging>bundle</packaging>
 
+	<dependencies>
+		<dependency>
+			<groupId>pl.piomin.services</groupId>
+			<artifactId>sample-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
 </project>

@@ -23,6 +23,11 @@ public interface AccountService {
 	@Produces("application/json")
 	public List<Account> findAll();
 
+	@GET
+	@Path("/customer/{customerId}")
+	@Produces("application/json")
+	public List<Account> findAllByCustomerId(@PathParam("customerId") Integer customerId);
+	
 	@POST
 	@Path("/")
 	@Consumes("application/json")

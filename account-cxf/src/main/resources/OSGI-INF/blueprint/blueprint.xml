@@ -29,6 +29,7 @@
     </cxf:bus>
 
     <bean id="accountServiceImpl" class="pl.piomin.services.cxf.account.service.AccountServiceImpl"/>
+    <service ref="accountServiceImpl" interface="pl.piomin.services.cxf.api.AccountService" />
     
     <jaxrs:server address="/account" id="accountService">
         <jaxrs:serviceBeans>
