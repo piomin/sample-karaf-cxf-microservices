@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.apache.cxf.endpoint.Server;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 
-import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 import pl.piomin.services.cxf.account.service.AccountServiceImpl;
 
@@ -15,8 +15,7 @@ public class AccountStarter {
         JAXRSServerFactoryBean factory = new JAXRSServerFactoryBean();
         factory.setAddress("http://localhost:8282/account");
         factory.setResourceClasses(AccountServiceImpl.class);
-//        factory.setResourceProvider(new SingletonResourceProvider(new AccountService()));
-        factory.setProvider(new JacksonJaxbJsonProvider());
+        factory.setProvider(new JacksonJsonProvider());
         Server server = factory.create();
         server.start();
     }

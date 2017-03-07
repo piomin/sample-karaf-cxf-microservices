@@ -5,8 +5,6 @@ import java.util.List;
 
 import pl.piomin.services.cxf.account.model.Account;
 
-//@Component(service = AccountService.class, property = { "service.exported.interfaces=*",
-//		"service.exported.configs=org.apache.cxf.rs", "org.apache.cxf.rs.address=/account" })
 public class AccountServiceImpl implements AccountService {
 
 	private List<Account> accounts;
