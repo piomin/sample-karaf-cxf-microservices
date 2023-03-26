@@ -7,4 +7,9 @@
   </parent>
   <artifactId>sample-api</artifactId>
   <packaging>bundle</packaging>
+
+  <properties>
+    <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
+  </properties>
+
 </project>
